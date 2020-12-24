@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Models;
+using questionnaire_api.Models;
 
 namespace questionnaire_api
 {
@@ -21,7 +21,7 @@ namespace questionnaire_api
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
+      services.AddDbContext<UserContext>(opt => opt.UseInMemoryDatabase("UserList"));
       services.AddControllers();
     }
 
